@@ -169,7 +169,7 @@ img{
 
 /* ========================= REUSABLE CSS CLASSES =====================  */
 .section{
-    padding: 2rem 0 4rem;
+    padding: 2rem 0 4rem 0;
     margin: auto;
     min-height: 80vh;
 }
@@ -529,7 +529,7 @@ img{
 /* ===================== ABOUT ================== */
 .about{
     padding-top: 1rem;
-    margin-top: 10rem;
+    margin-top: 5rem;
 }
 
 .about__img{
@@ -1364,7 +1364,7 @@ img{
     }
 
     .about{
-      margin-top: 14rem;
+      margin-top: 7rem;
     }
     .qualification__data{
       gap: 0.5rem;
@@ -1494,7 +1494,7 @@ img{
     }
 
     .about{
-      margin-top: 10rem;
+      margin-top: 8rem;
     }
     .about__container{
       column-gap: 5rem;
@@ -1579,4 +1579,11 @@ img{
       .form{
         min-width: 700px;
       }
+  }
+
+  @media screen and (max-width: 450px)
+  {
+    .contact{
+      margin-left: -2rem;
+    }
   }
