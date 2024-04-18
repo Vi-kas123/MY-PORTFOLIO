@@ -829,16 +829,16 @@
                     <form id="contact-form" class="cf" id="contact-form">
                         <div class="row">
                             <div class="col-lg-6">
-                                <input type="text" name="from_user_name" class="form-control form__color mb-30 cf" placeholder="Your Name">
+                                <input type="text" name="from_user_name" class="form-control form__color mb-30 cf" placeholder="Your Name" id="from_user_name">
                             </div> 
                             <div class="col-lg-6">
-                                <input type="email" name="from_user_email" class="form-control form__color mb-30 cf" placeholder="Your Email">
+                                <input type="email" name="from_user_email" class="form-control form__color mb-30 cf" placeholder="Your Email" id="from_user_email">
                             </div>
                             <div class="col-12">
-                                <input type="text" name="from_user_subject" class="form-control form__color mb-30 cf" placeholder="Subject">
+                                <input type="text" name="from_user_subject" class="form-control form__color mb-30 cf" placeholder="Subject" id="from_user_subject">
                             </div>
                             <div class="col-12">
-                                <textarea name="message" class="form-control form__color mb-30 cf" cols="30" rows="5" placeholder="Your Message"></textarea>
+                                <textarea name="message" class="form-control form__color mb-30 cf" cols="30" rows="5" placeholder="Your Message" id="message"></textarea>
                             </div>
                             <div class="col-12">
                                 <button type="submit" class="button button--flex send-message form_button">
@@ -921,8 +921,18 @@
         document.getElementById('contact-form').addEventListener('submit', function(event) {
             event.preventDefault(); // Prevent the form from submitting
 
-            // Send the email
-            emailjs.sendForm('service_yql8pmp', 'template_a4uv2ng', this)
+            // Assuming 'textField' is the ID of the text field you want to check
+            var from_user_name = document.getElementById('from_user_name').value;
+            var from_user_email = document.getElementById('from_user_email').value;
+            var message = document.getElementById('message').value;
+            var from_user_subject = document.getElementById('from_user_subject').value;
+
+            if (from_user_name === '' || from_user_email === '' || from_user_subject === '' || message === '') {
+                // The text field is blank or contains only whitespace
+                alert('Please fill all the fields');
+            } else {
+                // The text field is not blank
+                emailjs.sendForm('service_yql8pmp', 'template_a4uv2ng', this)
                 .then(function(response) {
                     console.log('Email sent successfully:', response);
                     alert('Email sent successfully!');
@@ -931,6 +941,10 @@
                     console.error('Email send failed:', error);
                     alert('Email send failed. Please try again later.');
                 });
+            }
+
+            // Send the email
+            
         });
     </script>
 
