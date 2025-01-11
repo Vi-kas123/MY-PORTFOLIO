@@ -533,7 +533,7 @@ img{
 }
 
 .about__img{
-    width: 450px;
+    width: 600px;
     border-radius: .5rem;
     margin-bottom: var(--mb-2);
     display: inline-flex;
@@ -1501,7 +1501,7 @@ img{
     }
 
     .about__img{
-      width: 500px;
+      width: 550px;
     }
 
     .about__description{
