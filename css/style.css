@@ -533,7 +533,7 @@ img{
 }
 
 .about__img{
-    width: 200px;
+    width: 450px;
     border-radius: .5rem;
     margin-bottom: var(--mb-2);
     display: inline-flex;
@@ -670,7 +670,7 @@ img{
     transition: 1.5s;
 }
 
-.cardskill .contentBx h2{
+.cardskill .contentBx h4{
     position: relative;
     font-weight: var(--font-medium);
     color: var(--text-color);
@@ -1501,7 +1501,7 @@ img{
     }
 
     .about__img{
-      width: 350px;
+      width: 500px;
     }
 
     .about__description{
